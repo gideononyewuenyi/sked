@@ -20,7 +20,7 @@ load_dotenv()
 
 GPT_API_KEY = os.getenv('GPT_API_KEY')
 
-# Utility function to process input with OpenAI
+# function to process input with OpenAI
 def process_input_with_openai(user_input):
     api_key = os.getenv("GPT_API_KEY")
     headers = {
@@ -38,7 +38,7 @@ def process_input_with_openai(user_input):
     processed_input = response.json()["choices"][0]["message"]["content"]
     return user_input + processed_input  
 
-# Utility function to set up Google Calendar API
+# function to set up Google Calendar API
 def setup_google_calendar_api():
     try:
         # Loading credentials from the token file
@@ -83,7 +83,6 @@ def extract_appointment_time(user_input):
 
     except Exception as e:
         return None  # Error occurred while extracting time
-
 
 @csrf_exempt
 def schedule_appointment(request):

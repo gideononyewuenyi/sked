@@ -1,14 +1,14 @@
 # # Import the function at the beginning of your test script
-from views import extract_appointment_time
+from views import process_input_with_openai
 
-# # Sample user input
-# sample_input = "Set up an appointment for 3:00 PM"
+# Sample user input
+sample_input = "Set up an appointment for 3:00 PM"
 
-# # Call the function with the sample input
-# response = process_input_with_openai(sample_input)
+# Call the function with the sample input
+response = process_input_with_openai(sample_input)
 
-# # Print or assert the response to check if it's as expected
-# print(response)
+# Print or assert the response to check if it's as expected
+print(response)
 
 
 
@@ -26,13 +26,13 @@ from views import extract_appointment_time
 
 
 
-test_cases = [
-    "Set up an appointment for 12:00 PM on 20th December",
-    "How about next Friday morning for the meeting?",
-    # ... more test cases
-]
+# test_cases = [
+#     "Set up an appointment for 12:00 PM on 20th December",
+#     "How about next Friday morning for the meeting?",
+#     # ... more test cases
+# ]
 
-for case in test_cases:
-    print(f"Input: {case}")
-    extracted_time = extract_appointment_time(case)
-    print(f"Extracted Time: {extracted_time}")
+# for case in test_cases:
+#     print(f"Input: {case}")
+#     extracted_time = extract_appointment_time(case)
+#     print(f"Extracted Time: {extracted_time}")
